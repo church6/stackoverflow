@@ -10,7 +10,36 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import json
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+class Object:
+    '''
+    Description :
+    '''
+
+    def toJSON(self):
+        '''
+        Description :
+        '''
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
+
+
+# So you just call it to serialize:
+
+
+def example():
+    '''
+    Description :
+    '''
+    me = Object()
+    me.name = "Onur"
+    me.age = 35
+    me.dog = Object()
+    me.dog.name = "Apollo"
+    print(me.toJSON())
 
 
 class Answer1:
@@ -24,6 +53,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():
@@ -169,7 +199,7 @@ def verify():
     '''
     Description : verify
     '''
-    # Answer1.verify()
+    Answer1.verify()
     # Answer2.verify()
     # Answer3.verify()
     # Answer4.verify()

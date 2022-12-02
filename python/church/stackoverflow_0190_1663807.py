@@ -10,6 +10,8 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import itertools
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +26,24 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        foo = [1, 2, 3]
+        bar = [4, 5, 6]
+        # Python 3
+        for f, b in zip(foo, bar):
+            print(f, b)
+        # zip stops when the shorter of foo or bar stops.
+
+        # Python 2
+        # import itertools
+        # itertools.zip
+        for f, b in zip(foo, bar):
+            print(f, b)
+        for f, b in itertools.zip_longest(foo, bar):
+            print(f, b)
+
+        for num, cheese, color in zip([1, 2, 3], ['manchego', 'stilton', 'brie'], ['red', 'blue', 'green']):
+            print('{} {} {}'.format(num, color, cheese))
 
     @staticmethod
     def code2():

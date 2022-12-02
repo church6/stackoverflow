@@ -12,6 +12,8 @@
 
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
+# pip install some-package.whl
+
 
 class Answer1:
     '''

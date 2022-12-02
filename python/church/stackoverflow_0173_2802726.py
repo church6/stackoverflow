@@ -24,6 +24,11 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        fruit = 'Apple'
+        isApple = True if fruit == 'Apple' else False
+        assert isApple
+        isApple = [False, True][fruit == 'Apple']
+        assert isApple
 
     @staticmethod
     def code2():

@@ -25,6 +25,22 @@ class Answer1:
         '''
         print('Answer1::code1')
 
+        temp1 = ['One', 'Two', 'Three', 'Four']
+        temp2 = ['One', 'Two']
+
+        diff = list(set(temp1) - set(temp2))
+        print(diff)
+        # assert diff == ['Three', 'Four']
+
+        # Beware that it is asymmetric :
+        diff = set([1, 2]) - set([2, 3])
+        print(diff)
+        assert diff == {1}
+
+        diff = set([1, 2]).symmetric_difference(set([2, 3]))
+        print(diff)
+        assert diff == {1, 3}
+
     @staticmethod
     def code2():
         '''

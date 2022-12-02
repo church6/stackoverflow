@@ -13,6 +13,28 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+For whitespace on both sides, use str.strip:
+s = "  \t a string example\t  "
+s = s.strip()
+
+For whitespace on the right side, use str.rstrip:
+s = s.rstrip()
+
+For whitespace on the left side, use str.lstrip:
+s = s.lstrip()
+
+You can provide an argument to strip arbitrary characters to any of these functions, like this:
+s = s.strip(' \t\n\r')
+This will strip any space, \t, \n, or \r characters from both sides of the string.
+
+
+The examples above only remove strings from the left-hand and right-hand sides of strings. If you want to also remove characters from the middle of a string, try re.sub:
+import re
+print(re.sub('[\s+]', '', s))
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

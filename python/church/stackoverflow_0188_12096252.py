@@ -10,6 +10,8 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import pandas as pd
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +26,12 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        # You can use the isin method:
+        df = pd.DataFrame({'A': [5, 6, 3, 4], 'B': [1, 2, 3, 5]})
+        print(df)
+        print(df[df['A'].isin([3, 6])])
+        # And to get the opposite use ~:
+        print(df[~df['A'].isin([3, 6])])
 
     @staticmethod
     def code2():

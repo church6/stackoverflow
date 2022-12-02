@@ -24,6 +24,8 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        num_lines = sum(1 for line in open('/etc/hostname', 'r', encoding='utf-8'))
+        assert 1 == num_lines
 
     @staticmethod
     def code2():

@@ -24,6 +24,10 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        sentence = 'Mary had a little lamb'
+        count = sentence.count('a')
+        print(f'count={count}')
+        assert 4 == count
 
     @staticmethod
     def code2():

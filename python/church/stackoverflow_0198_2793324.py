@@ -13,6 +13,21 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+To remove the first occurrence of an element, use list.remove:
+>>> xs = ['a', 'b', 'c', 'd']
+>>> xs.remove('b')
+>>> print(xs)
+['a', 'c', 'd']
+
+To remove all occurrences of an element, use a list comprehension:
+>>> xs = ['a', 'b', 'c', 'd', 'b', 'b', 'b', 'b']
+>>> xs = [x for x in xs if x != 'b']
+>>> print(xs)
+['a', 'c', 'd']
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

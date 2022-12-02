@@ -12,6 +12,20 @@
 
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
+'''
+If you want to remove leading and ending spaces, use str.strip():
+"  hello  apple  ".strip()
+'hello  apple'
+
+If you want to remove all space characters, use str.replace() (NB this only removes the “normal” ASCII space character ' ' U+0020 but not any other whitespace):
+"  hello  apple  ".replace(" ", "")
+'helloapple'
+
+If you want to remove duplicated spaces, use str.split() followed by str.join():
+" ".join("  hello  apple  ".split())
+'hello apple'
+'''
+
 
 class Answer1:
     '''

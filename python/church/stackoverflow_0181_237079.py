@@ -10,7 +10,31 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import os
+import os.path
+import platform
+import time
+
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def creation_date(path_to_file):
+    """
+    Try to get the date that a file was created, falling back to when it was
+    last modified if that isn't possible.
+    See http://stackoverflow.com/a/39501288/1709587 for explanation.
+    """
+    if platform.system() == 'Windows':
+        return os.path.getctime(path_to_file)
+    else:
+        stat = os.stat(path_to_file)
+        try:
+            return stat.st_birthtime
+        except AttributeError:
+            # We're probably on Linux. No easy way to get creation dates here,
+            # so we'll settle for when its content was last modified.
+            return stat.st_mtime
 
 
 class Answer1:
@@ -24,6 +48,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        print(creation_date('/etc/hostname'))
 
     @staticmethod
     def code2():
@@ -62,6 +87,14 @@ class Answer2:
         Description : code1
         '''
         print('Answer2::code1')
+
+        file = '/etc/hostname'
+        print("last modified: %s" % time.ctime(os.path.getmtime(file)))
+        print("created: %s" % time.ctime(os.path.getctime(file)))
+
+        # import os, time
+        (mode, ino, dev, nlink, uid, gid, size, atime, mtime, ctime) = os.stat(file)
+        print("last modified: %s" % time.ctime(mtime))
 
     @staticmethod
     def code2():
@@ -169,7 +202,7 @@ def verify():
     '''
     Description : verify
     '''
-    # Answer1.verify()
-    # Answer2.verify()
+    Answer1.verify()
+    Answer2.verify()
     # Answer3.verify()
     # Answer4.verify()

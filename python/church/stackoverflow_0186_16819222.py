@@ -10,6 +10,8 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import timeit
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +26,10 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        # This will convert the dict_keys object to a list:
+        newdict = {1: 0, 2: 0, 3: 0}
+        print(list(newdict.keys()))
 
     @staticmethod
     def code2():
@@ -51,6 +57,23 @@ class Answer1:
         print(f'{FOREGROUND_RED}{LINE}{ENDCOLOR}')
 
 
+def perf():
+    """
+    %timeit [*newdict]
+    1000000 loops, best of 3: 249 ns per loop
+
+    %timeit list(newdict)
+    1000000 loops, best of 3: 508 ns per loop
+
+    %timeit [k for k in newdict]
+    1000000 loops, best of 3: 574 ns per loop
+    """
+    newdict = {1: 0, 2: 0, 3: 0}
+    print(min(timeit.repeat(lambda: [*newdict])))
+    print(min(timeit.repeat(lambda: list(newdict))))
+    print(min(timeit.repeat(lambda: [k for k in newdict])))
+
+
 class Answer2:
     '''
     Description : Answer2
@@ -62,6 +85,10 @@ class Answer2:
         Description : code1
         '''
         print('Answer2::code1')
+        # Python >= 3.5 alternative: unpack into a list literal [*newdict]
+        # New unpacking generalizations (PEP 448) were introduced with Python 3.5 allowing you to now easily do:
+        newdict = {1: 0, 2: 0, 3: 0}
+        print([*newdict])
 
     @staticmethod
     def code2():
@@ -69,6 +96,7 @@ class Answer2:
         Description : code2
         '''
         print('Answer2::code2')
+        perf()
 
     @staticmethod
     def code3():

@@ -12,6 +12,12 @@
 
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
+# For Python 2.6 and later and Python 3.x:
+# except Exception as e: print(e)
+
+# For Python 2.5 and earlier, use:
+# except Exception,e: print str(e)
+
 
 class Answer1:
     '''

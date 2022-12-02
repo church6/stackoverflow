@@ -10,6 +10,10 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import json
+
+from datetime import datetime
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +28,11 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        my_dictionary = {'title': 'json', 'date': datetime.utcnow()}
+        # My quick & dirty JSON dump that eats dates and everything:
+        print(json.dumps(my_dictionary, indent=4, sort_keys=True, default=str))
+        # TypeError: Object of type datetime is not JSON serializable
+        # print(json.dumps(my_dictionary, indent=4, sort_keys=True))
 
     @staticmethod
     def code2():
@@ -169,7 +178,7 @@ def verify():
     '''
     Description : verify
     '''
-    # Answer1.verify()
+    Answer1.verify()
     # Answer2.verify()
     # Answer3.verify()
     # Answer4.verify()

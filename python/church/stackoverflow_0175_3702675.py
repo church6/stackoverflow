@@ -10,7 +10,23 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import traceback
+import sys
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+    Description : Answer1
+    '''
+    try:
+        # do_stuff()
+        print('t')
+    except Exception:
+        print(traceback.format_exc())
+        # or
+        print(sys.exc_info()[2])
 
 
 class Answer1:

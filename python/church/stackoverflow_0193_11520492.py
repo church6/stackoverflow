@@ -13,6 +13,46 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+def example():
+    """
+    The effects of the three different methods to remove an element from a list:
+    """
+    # remove removes the first matching value, not a specific index:
+    a = [0, 2, 3, 2]
+    a.remove(2)
+    print(a)
+    assert a == [0, 3, 2]
+
+    # del removes the item at a specific index:
+    a = [9, 8, 7, 6]
+    del a[1]
+    print(a)
+    assert a == [9, 7, 6]
+
+    # and pop removes the item at a specific index and returns it.
+    a = [4, 3, 5]
+    a.pop(1)
+    print(a)
+    assert a == [4, 5]
+
+    # Their error modes are different too:
+    a = [4, 5, 6]
+    try:
+        a.remove(7)
+    except ValueError as e:
+        print(e)
+
+    try:
+        del a[7]
+    except IndexError as e:
+        print(e)
+
+    try:
+        a.pop(7)
+    except IndexError as e:
+        print(e)
+
+
 class Answer1:
     '''
     Description : Answer1
@@ -24,6 +64,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

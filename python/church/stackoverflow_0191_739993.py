@@ -13,6 +13,10 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# python -c 'help("modules")'
+# pydoc modules
+
+
 class Answer1:
     '''
     Description : Answer1
