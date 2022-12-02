@@ -1,0 +1,27 @@
+https://rustcc.gitbooks.io/rustprimer/content/
+https://rust-lang-nursery.github.io/rust-cookbook/
+https://doc.rust-lang.org/nomicon/intro.html
+https://dhghomon.github.io/easy_rust
+https://highassurance.rs
+
+cargo build --target=x86_64-unknown-linux-musl
+
+curl --proto '=https' --tlsv1.3 https://sh.rustup.rs -sSf | sh
+
+rustc --version
+cargo --version
+cargo new hello --vcs none
+
+for i in `seq 0 15`; do align=$(printf "%02d" $i); rm -fr $align; cargo new "r${align}" --vcs none; done
+
+cat ./toc.txt |awk '{print "names[${#names[@]}]=\"" $0 "\"" }' > ./array.sh
+
+// You might then wonder why all primitive types aren't atomic and why standard library types aren't implemented to use Arc<T> by default.
+// The reason is that thread safety comes with a performance penalty that you only want to pay when you really need to.
+// If you're just performing operations on values within a single thread, your code can run faster if it doesn't have to enforce the guarantees atomics provide.
+
+
+Box<T> for allocating values on the heap
+Rc<T>, a reference counting type that enables multiple ownership
+Ref<T> and RefMut<T>, accessed through RefCell<T>, a type that enforces the borrowing rules at runtime instead of compile time
+

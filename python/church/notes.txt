@@ -1,0 +1,31 @@
+find src/ -type f -size +1540c
+find src/ -type f -size +1540c -printf "%f\n"
+
+find src/ -type f -size +1540c -printf "%f\n" | awk '/stackoverflow_/{print $0}'
+
+find src/ -type f -size +1540c -printf "%f\n" | awk 'match($0, /[0-9]+/){print $0, substr($0, RSTART, RLENGTH)}'
+
+for i in `seq 1 55`; do echo ${i} ;bash ./next.sh; done 
+
+assertArrayEquals(byte[] expecteds, byte[] actuals)
+
+find ./ -type f -name "stackoverflow_*.rs" -printf "%f\n" | sort | while read -r file; do
+	echo "${file}"
+	new="${file}"
+	old=$(echo "${file}" | awk -F'_' '{print substr($3, 1, length($3)-3)}')
+	echo "${old} -> ${new}"
+	#sed -i "s/stackoverflow_${new}/${new}/" "${file}"
+done
+
+# pip install -r /path/to/requirements.txt
+
+
+find ./ -type f -name "stackoverflow_*.py" -printf "%f\n" | sort | while read -r file; do
+	echo "${file}"
+	# sed  -i  '2i # pylint: disable=C0209'  "${file}"
+	# sed  -i  's/Answer1.verify()/# Answer1.verify()/' "${file}"
+	# sed  -i  's/Answer2.verify()/# Answer2.verify()/' "${file}"
+	# sed  -i  's/Answer3.verify()/# Answer3.verify()/' "${file}"
+	# sed  -i  's/Answer4.verify()/# Answer4.verify()/' "${file}"
+done
+

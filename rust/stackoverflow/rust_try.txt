@@ -1,0 +1,19 @@
+## https://users.rust-lang.org/t/automatically-replace-all-try-with/16873
+## Automatically replace all try!() with `?`
+
+If you've got code that still uses the try!() macro, you can quickly and accurately upgrade it to the ? 6 operator.
+
+Create rules.rs file with:
+
+fn rule1<T,E,X: From<E>>(r: Result<T,E>) -> Result<T,X> {
+    replace!(r#try!(r) => r?);
+    unreachable!()
+}
+Then run:
+
+rustup update
+cargo +nightly install rerast
+cargo +nightly rerast --rules_file=rules.rs --force
+and poof! the macro will be gone. Rerast 40 operates on the AST and fixes priorities of operations if necessary, so it's much smarter and more correct than textual find'n'replace.
+
+
