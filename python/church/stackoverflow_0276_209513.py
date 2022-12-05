@@ -24,6 +24,10 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        x = int("deadbeef", 16)
+        print(x)
+        x = int("0xdeadbeef", 0)
+        print(x)
 
     @staticmethod
     def code2():

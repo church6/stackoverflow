@@ -13,6 +13,18 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# xs = ['1', '2', '3']
+# s = ''.join(xs)
+
+# If the list contains integers, convert the elements to string before joining them:
+# xs = [1, 2, 3]
+# s = ''.join(str(x) for x in xs)
+
+# my_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# my_lst_str = ''.join(map(str, my_lst))
+# print(my_lst_str)
+
+
 class Answer1:
     '''
     Description : Answer1

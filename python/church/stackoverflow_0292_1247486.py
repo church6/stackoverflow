@@ -13,6 +13,20 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+"""
+$ python -m timeit -s'xs=range(10)' 'map(hex, xs)'
+100000 loops, best of 3: 4.86 usec per loop
+$ python -m timeit -s'xs=range(10)' '[hex(x) for x in xs]'
+100000 loops, best of 3: 5.58 usec per loop
+An example of how performance comparison gets completely reversed when map needs a lambda:
+
+$ python -m timeit -s'xs=range(10)' 'map(lambda x: x+2, xs)'
+100000 loops, best of 3: 4.24 usec per loop
+$ python -m timeit -s'xs=range(10)' '[x+2 for x in xs]'
+100000 loops, best of 3: 2.32 usec per loop
+"""
+
+
 class Answer1:
     '''
     Description : Answer1

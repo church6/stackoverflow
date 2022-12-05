@@ -13,6 +13,10 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# in is definitely more pythonic.
+# In fact has_key() was removed in Python 3.x.
+
+
 class Answer1:
     '''
     Description : Answer1

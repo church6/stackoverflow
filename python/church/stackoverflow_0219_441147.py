@@ -10,7 +10,22 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from datetime import datetime, timedelta
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+    Description :
+    '''
+    # You can use a timedelta object:
+    # from datetime import datetime, timedelta
+    today = datetime.today()
+    days_to_subtract = 1
+    d = today - timedelta(days=days_to_subtract)
+    print(d)
+    print(today)
 
 
 class Answer1:
@@ -24,6 +39,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

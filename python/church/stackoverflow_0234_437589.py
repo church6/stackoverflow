@@ -13,6 +13,15 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# from importlib import reload  # Python 3.4+
+# import foo
+
+# while True:
+# Do some things.
+#     if is_changed(foo):
+#         foo = reload(foo)
+
+
 class Answer1:
     '''
     Description : Answer1

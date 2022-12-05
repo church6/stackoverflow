@@ -10,6 +10,10 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+
+import pytz
+
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +28,8 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        print(len(pytz.common_timezones))
+        print(len(pytz.all_timezones))
 
     @staticmethod
     def code2():

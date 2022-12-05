@@ -13,6 +13,24 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# As of pip 1.3, there is a pip show command.
+# $ pip3 show pyqt5
+# Name: PyQt5
+# Version: 5.15.7
+# Summary: Python bindings for the Qt cross platform application toolkit
+# Home-page: https://www.riverbankcomputing.com/software/pyqt/
+# Author: Riverbank Computing Limited
+# Author-email: info@riverbankcomputing.com
+# License: GPL v3
+# Location: /home/android/.local/lib/python3.10/site-packages
+# Requires: PyQt5-Qt5, PyQt5-sip
+# Required-by:
+
+# In older versions, pip freeze and grep should do the job nicely.
+# $ pip freeze | grep Jinja2
+# Jinja2==2.7.3
+
+
 class Answer1:
     '''
     Description : Answer1

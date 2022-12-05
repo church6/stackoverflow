@@ -10,7 +10,50 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from math import sqrt
+from collections import namedtuple
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example1():
+    '''
+    Description :
+    '''
+    pt1 = (1.0, 5.0)
+    pt2 = (2.5, 1.5)
+
+    # from math import sqrt
+    line_length = sqrt((pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2)
+    print(f'line_length = {line_length}')
+
+
+def example2():
+    '''
+    Description :
+    '''
+    # from collections import namedtuple
+    Point = namedtuple('Point', 'x y')
+    pt1 = Point(1.0, 5.0)
+    pt2 = Point(2.5, 1.5)
+
+    line_length = sqrt((pt1.x - pt2.x) ** 2 + (pt1.y - pt2.y) ** 2)
+    print(f'line_length = {line_length}')
+
+
+def example3():
+    '''
+    Description :
+    '''
+    Point = namedtuple('Point', 'x y')
+    pt1 = Point(1.0, 5.0)
+    pt2 = Point(2.5, 1.5)
+
+    # use index referencing
+    line_length = sqrt((pt1[0] - pt2[0]) ** 2 + (pt1[1] - pt2[1]) ** 2)
+    # use tuple unpacking
+    x1, y1 = pt1
+    print(f'line_length = {line_length}')
 
 
 class Answer1:
@@ -24,6 +67,9 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example1()
+        example2()
+        example3()
 
     @staticmethod
     def code2():

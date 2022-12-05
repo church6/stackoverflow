@@ -10,7 +10,37 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import numpy as np
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def for_loop(data):
+    '''
+    Description :
+    '''
+    print('-' * 32)
+    for each in data:
+        print(each)
+    print('-' * 32)
+
+
+def example():
+    '''
+    Description :
+    '''
+    # import numpy as np
+    data = np.arange(0.0, 1.0, 0.1)
+    for_loop(data)
+
+    data = np.linspace(0, 1, 11)
+    for_loop(data)
+
+    data = np.linspace(0, 1, 10, endpoint=False)
+    for_loop(data)
+
+    data = (x * 0.1 for x in range(0, 10))
+    for_loop(data)
 
 
 class Answer1:
@@ -24,6 +54,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

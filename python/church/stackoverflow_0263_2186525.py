@@ -13,6 +13,11 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# from pathlib import Path
+# for path in Path('src').rglob('*.c'):
+#    print(path.name)
+
+
 class Answer1:
     '''
     Description : Answer1

@@ -13,6 +13,17 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# Locale unaware
+# '{:,}'.format(value)  # For Python ≥2.7
+# f'{value:,}'          # For Python ≥3.6
+
+# Locale aware
+# import locale
+# locale.setlocale(locale.LC_ALL, '')  # Use '' for auto, or force e.g. to 'en_US.UTF-8'
+# '{:n}'.format(value)  # For Python ≥2.7
+# f'{value:n}'          # For Python ≥3.6
+
+
 class Answer1:
     '''
     Description : Answer1

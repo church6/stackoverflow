@@ -13,6 +13,16 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# str_list = filter(None, str_list)
+# str_list = filter(bool, str_list)
+# str_list = filter(len, str_list)
+# str_list = filter(lambda item: item, str_list)
+
+
+# Python 3 returns an iterator from filter, so should be wrapped in a call to list()
+# str_list = list(filter(None, str_list))
+
+
 class Answer1:
     '''
     Description : Answer1

@@ -13,6 +13,11 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# import shutil
+# shutil.rmtree('/folder_name')
+# shutil.rmtree('/folder_name', ignore_errors=True)
+
+
 class Answer1:
     '''
     Description : Answer1

@@ -13,6 +13,17 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# import a_module
+# print(a_module.__file__)
+
+# Will actually give you the path to the .pyc file that was loaded, at least on Mac OS X. So I guess you can do:
+# import os
+# path = os.path.abspath(a_module.__file__)
+
+# You can also try:
+# path = os.path.dirname(a_module.__file__)
+
+
 class Answer1:
     '''
     Description : Answer1

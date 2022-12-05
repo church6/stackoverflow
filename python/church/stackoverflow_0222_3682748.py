@@ -10,7 +10,29 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from datetime import datetime
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+        Description :
+
+    # .fromtimestamp() might fail for past dates if a local timezone had different utc offset.
+    # You need a historic timezone database such as provided by pytz module (or your OS).
+    # Or just work in UTC and use .utcfromtimestamp().
+    '''
+    # from datetime import datetime
+    ts = int('1284101485')
+
+    # if you encounter a "year is out of range" error the timestamp
+    # may be in milliseconds, try `ts /= 1000` in that case
+    print(datetime.utcfromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S'))
+
+    # from datetime import datetime
+    ts = datetime.fromtimestamp(1172969203.1)
+    print(ts)
 
 
 class Answer1:
@@ -24,6 +46,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

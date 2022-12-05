@@ -10,7 +10,19 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import ast
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+    Description :
+    '''
+    # You can use the built-in ast.literal_eval:
+    # import ast
+    d = ast.literal_eval("{'muffin' : 'lolz', 'foo' : 'kitty'}")
+    print(d)
 
 
 class Answer1:
@@ -24,6 +36,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

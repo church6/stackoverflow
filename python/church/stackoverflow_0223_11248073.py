@@ -13,6 +13,15 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+"""
+I've found this snippet as an alternative solution. It's a more graceful removal of libraries than remaking the virtualenv:
+pip freeze | xargs pip uninstall -y
+
+In case you have packages installed via VCS, you need to exclude those lines and remove the packages manually (elevated from the comments below):
+pip freeze | grep -v "^-e" | xargs pip uninstall -y
+"""
+
+
 class Answer1:
     '''
     Description : Answer1

@@ -13,6 +13,13 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# /scripts or /bin for that kind of command-line interface stuff
+# /tests for your tests
+# /lib for your C-language libraries
+# /doc for most documentation
+# /apidoc for the Epydoc-generated API docs.
+
+
 class Answer1:
     '''
     Description : Answer1

@@ -13,6 +13,21 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# It allows you to provide a default value if the key is missing:
+# dictionary.get("bogus", default_value)
+# returns default_value (whatever you choose it to be), whereas
+
+# dictionary["bogus"]
+# would raise a KeyError.
+
+# If omitted, default_value is None, such that
+
+# dictionary.get("bogus")  # <-- No default specified -- defaults to None
+# returns None just like
+
+# dictionary.get("bogus", None)
+
+
 class Answer1:
     '''
     Description : Answer1

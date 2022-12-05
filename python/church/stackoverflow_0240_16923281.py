@@ -13,6 +13,13 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# To delimit by a tab you can use the sep argument of to_csv:
+# df.to_csv(file_name, sep='\t')
+
+# To use a specific encoding (e.g. 'utf-8') use the encoding argument:
+# df.to_csv(file_name, sep='\t', encoding='utf-8')
+
+
 class Answer1:
     '''
     Description : Answer1

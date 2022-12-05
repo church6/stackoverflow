@@ -13,6 +13,25 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+class Body:
+    '''
+    Description :
+    '''
+
+    def __init__(self, name, count):
+        '''
+        Description :
+        '''
+        self.name = name
+        self.count = count
+
+    def __repr__(self):
+        '''
+        Description :
+        '''
+        return repr((self.name, self.count))
+
+
 class Answer1:
     '''
     Description : Answer1
@@ -24,6 +43,18 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        ut = [Body('toe', 10), Body('leg', 2), Body('nose', 1), Body('bone', 206)]
+
+        # To sort the list in place...
+        ut.sort(key=lambda x: x.count, reverse=True)
+        for each in ut:
+            print(each)
+
+        ut = [Body('toe', 10), Body('leg', 2), Body('nose', 1), Body('bone', 206)]
+        # To return a new list, use the sorted() built-in function...
+        newlist = sorted(ut, key=lambda x: x.count, reverse=True)
+        for each in newlist:
+            print(each)
 
     @staticmethod
     def code2():

@@ -13,6 +13,15 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+Python 3+:
+inv_map = {v: k for k, v in my_map.items()}
+
+Python 2:
+inv_map = {v: k for k, v in my_map.iteritems()}
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

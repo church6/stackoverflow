@@ -10,7 +10,29 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from os.path import expanduser
+from pathlib import Path
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+# You want to use os.path.expanduser.
+# This will ensure it works on all platforms:
+# from os.path import expanduser
+# home = expanduser("~")
+
+
+# If you're on Python 3.5+ you can use pathlib.Path.home():
+# from pathlib import Path
+# home = str(Path.home())
+
+
+def example():
+    '''
+    Description :
+    '''
+    print(expanduser("~"))
+    print(str(Path.home()))
 
 
 class Answer1:
@@ -24,6 +46,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

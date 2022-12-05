@@ -45,16 +45,16 @@ echo "# OS_DATE_NEXT_DAY = ${OS_DATE_NEXT_DAY}"
 
 function tool() {
 	file="$*"
-    # echo "${file}"
-    black --line-length 128 --skip-string-normalization --skip-magic-trailing-comma "${file}" 2> /dev/null
-    flake8 --max-line-length 256 --indent-size 4 "${file}" > /dev/null
-    pylint --max-line-length=256 --indent-after-paren=4 "${file}" | awk '!/^\\s*\$/ && !/Your code has been rated at/ && !/------------------------------------------------------------------/{print \$0}'
+	# echo "${file}"
+	black --line-length 128 --skip-string-normalization --skip-magic-trailing-comma "${file}" 2>/dev/null
+	flake8 --max-line-length 256 --indent-size 4 "${file}" >/dev/null
+	pylint --max-line-length=256 --indent-after-paren=4 "${file}" | awk '!/^\\s*\$/ && !/Your code has been rated at/ && !/------------------------------------------------------------------/{print $0}'
 }
 
 function fmt() {
 	find "${WORK_DIR}" -type f -name "stackoverflow_*.py" | while read -r file; do
-    # echo "${file}"
-    tool "${file}"
+		# echo "${file}"
+		tool "${file}"
 	done
 }
 # -------------------------------- main --------------------------------
@@ -62,7 +62,7 @@ function main() {
 	# clear
 	git status --short | awk '$1 ~ /^M$/{$1="";print $0}' | while read -r file; do
 		if [[ "${file}" == *".py" ]]; then
-	    tool "${file}"
+			tool "${file}"
 		fi
 	done
 
@@ -71,10 +71,9 @@ function main() {
 		exit ${EX_USAGE}
 	}
 
-	readonly TEMP="/tmp/tmp.stackoverflow.python"
-	python3 "${WORK_DIR}/main.py" -i "$(cat ${TEMP})"
+	python3 "${WORK_DIR}/main.py" -i $(cut -f 2 <"${WORK_DIR}/tmp_stackoverflow.txt")
 
-	popd "${WORK_DIR}"
+	popd
 }
 
 main "$@"

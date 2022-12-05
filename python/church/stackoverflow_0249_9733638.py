@@ -13,6 +13,28 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# import requests
+# r = requests.post('http://httpbin.org/post', json={"key": "value"})
+# r.status_code
+# 200
+# r.json()
+# {'args': {},
+#  'data': '{"key": "value"}',
+#  'files': {},
+#  'form': {},
+#  'headers': {'Accept': '*/*',
+#              'Accept-Encoding': 'gzip, deflate',
+#              'Connection': 'close',
+#              'Content-Length': '16',
+#              'Content-Type': 'application/json',
+#              'Host': 'httpbin.org',
+#              'User-Agent': 'python-requests/2.4.3 CPython/3.4.0',
+#              'X-Request-Id': 'xx-xx-xx'},
+#  'json': {'key': 'value'},
+#  'origin': 'x.x.x.x',
+#  'url': 'http://httpbin.org/post'}
+
+
 class Answer1:
     '''
     Description : Answer1

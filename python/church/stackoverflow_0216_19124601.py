@@ -13,6 +13,14 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# You can also use the option_context, with one or more options:
+# with pd.option_context('display.max_rows', None, 'display.max_columns', None):  # more options can be specified also
+#     print(df)
+
+# This will automatically return the options to their previous values.
+# If you are working on jupyter-notebook, using display(df) instead of print(df) will use jupyter rich display logic (like so).
+
+
 class Answer1:
     '''
     Description : Answer1

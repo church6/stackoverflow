@@ -10,6 +10,8 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import xml.etree.ElementTree as ET
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +26,11 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        root = ET.parse('test1912434.xml').getroot()
+        for type_tag in root.findall('bar/type'):
+            value = type_tag.get('foobar')
+            print(value)
 
     @staticmethod
     def code2():

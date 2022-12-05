@@ -10,7 +10,24 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import pandas as pd
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+    Description :
+    '''
+    ds = [
+        {'points': 50, 'time': '5:00', 'year': 2010},
+        {'points': 25, 'time': '6:00', 'month': "february"},
+        {'points': 90, 'time': '9:00', 'month': 'january'},
+        {'points_h1': 20, 'month': 'june'},
+    ]
+
+    df = pd.DataFrame(ds)
+    print(df)
 
 
 class Answer1:
@@ -24,6 +41,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

@@ -13,6 +13,16 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# xs = [x for x in xs if x.attribute == value]
+# xs = filter(lambda x: x.attribute == value, xs)
+
+
+# The other option to consider is to use a generator instead of a list comprehension:
+# def filterbyvalue(seq, value):
+#    for el in seq:
+#        if el.attribute==value: yield el
+
+
 class Answer1:
     '''
     Description : Answer1

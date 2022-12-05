@@ -10,7 +10,40 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from itertools import filterfalse
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def determine(i):
+    '''
+    Description :
+    '''
+    return i % 2 == 0
+
+
+def example():
+    '''
+    Description :
+    '''
+    somelist = [0, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+    somelist = [x for x in somelist if not determine(x)]
+    print(somelist)
+    # Or, by assigning to the slice somelist[:], you can mutate the existing list to contain only the items you want:
+    somelist = [0, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+    somelist[:] = [x for x in somelist if not determine(x)]
+    print(somelist)
+    # This approach could be useful if there are other references to somelist that need to reflect the changes.
+
+    # Instead of a comprehension, you could also use itertools.
+    # In Python 2:
+    # from itertools import ifilterfalse
+    # somelist[:] = ifilterfalse(determine, somelist)
+    # Or in Python 3:
+    # from itertools import filterfalse
+    somelist = [0, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+    somelist[:] = filterfalse(determine, somelist)
+    print(somelist)
 
 
 class Answer1:
@@ -24,6 +57,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

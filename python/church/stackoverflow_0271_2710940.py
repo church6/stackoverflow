@@ -13,6 +13,21 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+import dis
+dis.dis("not x is None")
+  1           0 LOAD_NAME                0 (x)
+              2 LOAD_CONST               0 (None)
+              4 COMPARE_OP               9 (is not)
+              6 RETURN_VALUE
+dis.dis("x is not None")
+  1           0 LOAD_NAME                0 (x)
+              2 LOAD_CONST               0 (None)
+              4 COMPARE_OP               9 (is not)
+              6 RETURN_VALUE
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

@@ -13,6 +13,11 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# For Python ≥ 3.5, use pathlib.Path.mkdir:
+# import pathlib
+# pathlib.Path("/tmp/path/to/desired/directory").mkdir(parents=True, exist_ok=True)
+
+
 class Answer1:
     '''
     Description : Answer1

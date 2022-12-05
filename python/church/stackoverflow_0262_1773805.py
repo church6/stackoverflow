@@ -13,6 +13,14 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# import yaml
+# with open("example.yaml", "r") as stream:
+#     try:
+#         print(yaml.safe_load(stream))
+#     except yaml.YAMLError as exc:
+#         print(exc)
+
+
 class Answer1:
     '''
     Description : Answer1

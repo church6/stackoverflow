@@ -10,7 +10,39 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import uuid
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+    Description :
+    # https://docs.python.org/3/library/uuid.html
+    '''
+    # import uuid
+    # make a random UUID
+    uid = uuid.uuid4()
+    print(uid)
+    # Convert a UUID to a string of hex digits in standard form
+    uid = str(uuid.uuid4())
+    print(uid)
+
+    # Convert a UUID to a 32-character hexadecimal string
+    uid = uuid.uuid4().hex
+    print(uid)
+
+    ######################################
+    # make a random UUID
+    uid = uuid.uuid5(uuid.NAMESPACE_DNS, 'python.org')
+    print(uid)
+    # Convert a UUID to a string of hex digits in standard form
+    uid = str(uuid.uuid5(uuid.NAMESPACE_DNS, 'python.org'))
+    print(uid)
+
+    # Convert a UUID to a 32-character hexadecimal string
+    uid = uuid.uuid5(uuid.NAMESPACE_DNS, 'python.org').hex
+    print(uid)
 
 
 class Answer1:
@@ -24,6 +56,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

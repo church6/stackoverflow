@@ -13,6 +13,10 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# import os
+# os.environ[name] = value
+
+
 class Answer1:
     '''
     Description : Answer1

@@ -29,3 +29,7 @@ find ./ -type f -name "stackoverflow_*.py" -printf "%f\n" | sort | while read -r
 	# sed  -i  's/Answer4.verify()/# Answer4.verify()/' "${file}"
 done
 
+
+Python doesn't support ++, but you can do: number += 1
+
+
