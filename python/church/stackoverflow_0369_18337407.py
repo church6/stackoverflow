@@ -4,13 +4,16 @@
 # @filename     :  stackoverflow_0369_18337407.py
 # @author       :  Copyright (C) Church.Zhong
 # @date         :  Fri Nov 25 09:09:59 AM HKT 2022
-# @title        :  Saving UTF-8 texts with json.dumps as UTF-8, not as a \u escape sequence
+# @title        :  Saving UTF-8 texts with json.dumps as UTF-8, not as a \\u escape sequence
 # @see          :  https://docs.python.org/3/library/datetime.html
 # @require      :  Python 3.10.6 works well.
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+# Use the ensure_ascii=False switch to json.dumps(), then encode the value to UTF-8 manually
 
 
 class Answer1:

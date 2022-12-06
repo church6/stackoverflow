@@ -10,7 +10,16 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import datetime
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+'''
+>>> import datetime
+>>> datetime.datetime.today()
+datetime.datetime(2012, 3, 23, 23, 24, 55, 173504)
+>>> datetime.datetime.today().weekday()
+'''
 
 
 class Answer1:
@@ -24,6 +33,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        print(datetime.datetime.today().weekday())
 
     @staticmethod
     def code2():

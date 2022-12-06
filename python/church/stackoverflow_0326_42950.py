@@ -10,7 +10,20 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import calendar
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+'''
+>>> import calendar
+>>> calendar.monthrange(2002, 1)
+(1, 31)
+>>> calendar.monthrange(2008, 2)  # leap years are handled correctly
+(4, 29)
+>>> calendar.monthrange(2100, 2)  # years divisible by 100 but not 400 aren't leap years
+(0, 28)
+'''
 
 
 class Answer1:
@@ -24,6 +37,12 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        # The monthrange() method is used to get weekday of first day of the month and number of days in month, for the specified year and month.
+
+        print(calendar.monthrange(2002, 1))
+        print(calendar.monthrange(2008, 2))  # leap years are handled correctly
+        print(calendar.monthrange(2100, 2))  # years divisible by 100 but not 400 aren't leap years
 
     @staticmethod
     def code2():
@@ -169,7 +188,7 @@ def verify():
     '''
     Description : verify
     '''
-    # Answer1.verify()
+    Answer1.verify()
     # Answer2.verify()
     # Answer3.verify()
     # Answer4.verify()

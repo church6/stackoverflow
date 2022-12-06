@@ -6,7 +6,7 @@
     Multi-Language Support -.  |  |  |  |  |  |  |  |  |  |  .- GUI Designer (Qt, Eric, etc)
    Auto Code Completion -.  |  |  |  |  |  |  |  |  |  |  |  |  .- Integrated DB Support
      Commercial/Free -.  |  |  |  |  |  |  |  |  |  |  |  |  |  |  .- Refactoring
-   Cross Platform -.  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |     
+   Cross Platform -.  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
                   +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
 Atom              |Y |F |Y |Y*|Y |Y |Y |Y |Y |Y |  |Y |Y |  |  |  |  |*many plugins
 Editra            |Y |F |Y |Y |  |  |Y |Y |Y |Y |  |Y |  |  |  |  |  |
@@ -40,7 +40,7 @@ Visual Studio Code|Y |F |Y |Y |Y |Y |Y |Y |Y |Y |? |Y |? |? |? |? |Y |uses plugi
 WingIde           |Y |C |Y |Y*|Y |Y |Y |Y |Y |Y |  |Y |Y |Y |  |  |  |*support for C
 Zeus              |W |C |  |  |  |  |Y |Y |Y |Y |  |Y |Y |  |  |  |  |
                   +--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+
-   Cross Platform -'  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |     
+   Cross Platform -'  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
      Commercial/Free -'  |  |  |  |  |  |  |  |  |  |  |  |  |  |  '- Refactoring
    Auto Code Completion -'  |  |  |  |  |  |  |  |  |  |  |  |  '- Integrated DB Support
     Multi-Language Support -'  |  |  |  |  |  |  |  |  |  |  '- GUI Designer (Qt, Eric, etc)

@@ -13,6 +13,19 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+"""
+>>> import dateutil.parser
+>>> dateutil.parser.isoparse('2008-09-03T20:56:35.450686Z') # RFC 3339 format
+datetime.datetime(2008, 9, 3, 20, 56, 35, 450686, tzinfo=tzutc())
+>>> dateutil.parser.isoparse('2008-09-03T20:56:35.450686') # ISO 8601 extended format
+datetime.datetime(2008, 9, 3, 20, 56, 35, 450686)
+>>> dateutil.parser.isoparse('20080903T205635.450686') # ISO 8601 basic format
+datetime.datetime(2008, 9, 3, 20, 56, 35, 450686)
+>>> dateutil.parser.isoparse('20080903') # ISO 8601 basic format, date only
+datetime.datetime(2008, 9, 3, 0, 0)
+"""
+
+
 class Answer1:
     '''
     Description : Answer1

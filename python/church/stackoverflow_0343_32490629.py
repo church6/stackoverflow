@@ -10,7 +10,26 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from datetime import datetime
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+"""
+Use strftime:
+
+>>> from datetime import datetime
+>>> datetime.today().strftime('%Y-%m-%d')
+'2021-01-26'
+To also include a zero-padded Hour:Minute:Second at the end:
+
+>>> datetime.today().strftime('%Y-%m-%d %H:%M:%S')
+'2021-01-26 16:50:03'
+To get the UTC date and time:
+
+>>> datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
+'2021-01-27 00:50:03'
+"""
 
 
 class Answer1:
@@ -24,6 +43,9 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        print(datetime.today().strftime('%Y-%m-%d'))
+        print(datetime.today().strftime('%Y-%m-%d %H:%M:%S'))
+        print(datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S'))
 
     @staticmethod
     def code2():

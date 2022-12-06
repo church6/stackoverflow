@@ -5,7 +5,7 @@ find src/ -type f -size +1540c -printf "%f\n" | awk '/stackoverflow_/{print $0}'
 
 find src/ -type f -size +1540c -printf "%f\n" | awk 'match($0, /[0-9]+/){print $0, substr($0, RSTART, RLENGTH)}'
 
-for i in `seq 1 55`; do echo ${i} ;bash ./next.sh; done 
+for i in `seq 1 55`; do echo ${i} ;bash ./next.sh; done
 
 assertArrayEquals(byte[] expecteds, byte[] actuals)
 
@@ -31,5 +31,19 @@ done
 
 
 Python doesn't support ++, but you can do: number += 1
+
+https://peps.python.org/pep-0020
+
+pip install --upgrade pip
+python -m pip install --upgrade pip
+
+
+find ./ -type f -name "*.pdf" -printf "%f\n" | sort | while read -r file; do
+	# echo "${file}"
+	new=$(echo "${file// /_}")
+	echo "${new}"
+	# git mv -f "${file}" "${new}"
+	mv -f "${file}" "${new}"
+done
 
 

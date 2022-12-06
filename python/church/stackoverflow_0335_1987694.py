@@ -13,6 +13,16 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+import sys
+import numpy
+numpy.set_printoptions(threshold=sys.maxsize)
+
+import numpy as np
+np.set_printoptions(threshold=np.inf)
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

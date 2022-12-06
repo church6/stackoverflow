@@ -24,6 +24,9 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        with open('/etc/hostname', mode='r', encoding='utf-8') as a, open('/etc/timezone', mode='r', encoding='utf-8') as b:
+            print(a.read())
+            print(b.read())
 
     @staticmethod
     def code2():

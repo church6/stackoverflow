@@ -10,7 +10,51 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from functools import wraps
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def logged1(func):
+    '''
+    Description :
+    '''
+
+    def with_logging1(*args, **kwargs):
+        """with_logging1"""
+        print(func.__name__ + " was called")
+        return func(*args, **kwargs)
+
+    return with_logging1
+
+
+@logged1
+def f1(x):
+    """does some math"""
+    return x + x * x
+
+
+################################################################
+
+
+def logged2(func):
+    '''
+    Description :
+    '''
+
+    @wraps(func)
+    def with_logging2(*args, **kwargs):
+        """with_logging2"""
+        print(func.__name__ + " was called")
+        return func(*args, **kwargs)
+
+    return with_logging2
+
+
+@logged2
+def f2(x):
+    """does some math"""
+    return x + x * x
 
 
 class Answer1:
@@ -24,6 +68,12 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        print(f1.__name__)
+        print(f1.__doc__)
+        assert 12 == f1(3)
+        print(f2.__name__)  # prints 'f'
+        print(f2.__doc__)  # prints 'does some math'
+        assert 12 == f2(3)
 
     @staticmethod
     def code2():

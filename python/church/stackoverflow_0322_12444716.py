@@ -13,6 +13,18 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+from matplotlib import pyplot as plt
+
+fig = plt.figure()
+plt.plot(data)
+fig.suptitle('test title', fontsize=20)
+plt.xlabel('xlabel', fontsize=18)
+plt.ylabel('ylabel', fontsize=16)
+fig.savefig('test.jpg')
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

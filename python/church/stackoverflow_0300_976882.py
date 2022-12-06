@@ -10,6 +10,8 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from random import shuffle
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +26,10 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        x = [[i] for i in range(10)]
+        shuffle(x)
+        print(x)
 
     @staticmethod
     def code2():

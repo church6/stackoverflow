@@ -13,6 +13,10 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+# if all( [cond1 == 'val1', cond2 == 'val2', cond3 == 'val3', cond4 == 'val4'] ):
+# if any( [cond1 == 'val1', cond2 == 'val2', cond3 == 'val3', cond4 == 'val4'] ):
+
+
 class Answer1:
     '''
     Description : Answer1

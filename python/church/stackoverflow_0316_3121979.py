@@ -13,6 +13,16 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+I have some data either in a list of lists or a list of tuples, like this:
+
+data = [[1,2,3], [4,5,6], [7,8,9]]
+data = [(1,2,3), (4,5,6), (7,8,9)]
+And I want to sort by the 2nd element in the subset. Meaning, sorting by 2,5,8 where 2 is from (1,2,3), 5 is from (4,5,6).
+What is the common way to do this? Should I store tuples or lists in my list?
+'''
+
+
 class Answer1:
     '''
     Description : Answer1
@@ -24,6 +34,23 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        data = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+        sorted_by_second = sorted(data, key=lambda tup: tup[1])
+        print(sorted_by_second)
+        # or:
+
+        data = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+        data.sort(key=lambda tup: tup[1])  # sorts in place
+        print(sorted_by_second)
+        # The default sort mode is ascending. To sort in descending order use the option reverse=True:
+
+        data = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+        sorted_by_second = sorted(data, key=lambda tup: tup[1], reverse=True)
+        print(sorted_by_second)
+        # or:
+        data = [(1, 2, 3), (4, 5, 6), (7, 8, 9)]
+        data.sort(key=lambda tup: tup[1], reverse=True)  # sorts in place
+        print(sorted_by_second)
 
     @staticmethod
     def code2():

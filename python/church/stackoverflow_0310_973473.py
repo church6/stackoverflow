@@ -10,6 +10,8 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import os
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +26,14 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        files = list(os.walk('.'))
+        print(len(files))
+        for x in files:
+            for y in x:
+                print(len(y))
+
+        files = list(os.scandir('.'))
+        print(f'os.scandir={len(files)}')
 
     @staticmethod
     def code2():

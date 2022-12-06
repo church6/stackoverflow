@@ -10,6 +10,8 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import numpy
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +26,14 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        # Creates a list containing 5 lists, each of 8 items, all set to 0
+        w, h = 8, 5
+        Matrix = [[0 for x in range(w)] for y in range(h)]
+        print(Matrix)
+        # import numpy
+        array = numpy.zeros((3, 4))
+        print(array)
 
     @staticmethod
     def code2():

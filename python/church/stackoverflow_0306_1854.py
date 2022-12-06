@@ -10,6 +10,9 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import os
+import platform
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +27,10 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        print(os.name)
+        print(platform.system())
+        print(platform.release())
 
     @staticmethod
     def code2():

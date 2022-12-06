@@ -4,7 +4,7 @@
 # @filename     :  stackoverflow_1397_9956741.py
 # @author       :  Copyright (C) Church.Zhong
 # @date         :  Fri Nov 25 09:09:59 AM HKT 2022
-# @title        :  How to install multiple python packages at once using pip 
+# @title        :  How to install multiple python packages at once using pip
 # @see          :  https://docs.python.org/3/library/datetime.html
 # @require      :  Python 3.10.6 works well.
 # @style        :  https://google.github.io/styleguide/pyguide.html

@@ -10,6 +10,10 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import ast
+
+import json
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +28,17 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        x = '[ "A","B","C" , " D"]'
+        x = ast.literal_eval(x)
+        print(x)
+
+        x = ["A", "B", "C", " D"]
+        x = [n.strip() for n in x]
+        print(x)
+
+        x = '[ "A","B","C" , " D"]'
+        print(json.loads(x))
 
     @staticmethod
     def code2():
@@ -169,7 +184,7 @@ def verify():
     '''
     Description : verify
     '''
-    # Answer1.verify()
+    Answer1.verify()
     # Answer2.verify()
     # Answer3.verify()
     # Answer4.verify()

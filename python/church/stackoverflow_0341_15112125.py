@@ -13,6 +13,57 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+def example1():
+    '''
+    Description :
+    '''
+    x = 0
+    y = 1
+    z = 3
+    mylist = []
+    if 0 in (x, y, z):
+        mylist.append('c')
+    elif 1 in (x, y, z):
+        mylist.append('d')
+    elif 2 in (x, y, z):
+        mylist.append('e')
+    elif 3 in (x, y, z):
+        mylist.append('f')
+    print(mylist)
+
+
+# or better still:
+def example2():
+    '''
+    Description :
+    '''
+    x = 0
+    y = 1
+    z = 3
+    mylist = []
+    if 0 in {x, y, z}:
+        mylist.append('c')
+    elif 1 in {x, y, z}:
+        mylist.append('d')
+    elif 2 in {x, y, z}:
+        mylist.append('e')
+    elif 3 in {x, y, z}:
+        mylist.append('f')
+    print(mylist)
+
+
+def example3():
+    '''
+    Description :
+    '''
+    x = 0
+    y = 1
+    z = 3
+    d = {0: 'c', 1: 'd', 2: 'e', 3: 'f'}
+    mylist = [d[k] for k in [x, y, z]]
+    print(mylist)
+
+
 class Answer1:
     '''
     Description : Answer1

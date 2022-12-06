@@ -13,6 +13,18 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+def example():
+    '''
+    Description :
+    '''
+    mydict = {'george': 16, 'amber': 19}
+    print(mydict.keys()[mydict.values().index(16)])  # Prints george
+
+    # Or in Python 3.x:
+    mydict = {'george': 16, 'amber': 19}
+    print(list(mydict.keys())[list(mydict.values()).index(16)])  # Prints george
+
+
 class Answer1:
     '''
     Description : Answer1
@@ -24,6 +36,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

@@ -10,7 +10,18 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import pandas as pd
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+    Description :
+    '''
+    df = pd.DataFrame({'col': ['foo', 'foobar', 'bar', 'baz']})
+    search = df[df['col'].str.contains("bar")]
+    print(search)
 
 
 class Answer1:
@@ -24,6 +35,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():
@@ -169,7 +181,7 @@ def verify():
     '''
     Description : verify
     '''
-    # Answer1.verify()
+    Answer1.verify()
     # Answer2.verify()
     # Answer3.verify()
     # Answer4.verify()

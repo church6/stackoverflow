@@ -13,6 +13,13 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+import zipfile
+with zipfile.ZipFile(path_to_zip_file, 'r') as zip_ref:
+    zip_ref.extractall(directory_to_extract_to)
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

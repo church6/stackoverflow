@@ -10,7 +10,25 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import os
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+def example():
+    '''
+    Description :
+    '''
+    directory_in_str = '.'
+    directory = os.fsencode(directory_in_str)
+
+    for file in os.listdir(directory):
+        filename = os.fsdecode(file)
+        if filename.endswith(".asm") or filename.endswith(".py"):
+            print(os.path.join(str(directory), filename))
+            continue
+        else:
+            continue
 
 
 class Answer1:
@@ -24,6 +42,7 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        example()
 
     @staticmethod
     def code2():

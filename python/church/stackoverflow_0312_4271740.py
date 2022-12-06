@@ -10,6 +10,10 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+import platform
+
+import socket
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
@@ -24,6 +28,9 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+
+        print(platform.node())
+        print(socket.gethostname())
 
     @staticmethod
     def code2():

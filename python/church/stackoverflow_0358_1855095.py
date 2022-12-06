@@ -13,6 +13,13 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+"""
+The easiest way is to use shutil.make_archive. It supports both zip and tar formats.
+import shutil
+shutil.make_archive(output_filename, 'zip', dir_name)
+"""
+
+
 class Answer1:
     '''
     Description : Answer1

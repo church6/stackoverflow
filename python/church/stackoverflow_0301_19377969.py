@@ -13,6 +13,44 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+If both columns are strings, you can concatenate them directly:
+
+df["period"] = df["Year"] + df["quarter"]
+If one (or both) of the columns are not string typed, you should convert it (them) first,
+
+df["period"] = df["Year"].astype(str) + df["quarter"]
+Beware of NaNs when doing this!
+If you need to join multiple string columns, you can use agg:
+
+df['period'] = df[['Year', 'quarter', ...]].agg('-'.join, axis=1)
+Where "-" is the separator.
+'''
+
+
+'''
+[''.join(i) for i in zip(df["Year"].map(str),df["quarter"])]
+
+In [113]: %timeit df['Year'].astype(str) + df['quarter']
+10 loops, best of 3: 53.3 ms per loop
+
+In [114]: %timeit df['Year'].map(str) + df['quarter']
+10 loops, best of 3: 65.5 ms per loop
+
+In [115]: %timeit df.Year.str.cat(df.quarter)
+10 loops, best of 3: 79.9 ms per loop
+
+In [116]: %timeit df.loc[:, ['Year','quarter']].astype(str).sum(axis=1)
+1 loop, best of 3: 230 ms per loop
+
+In [117]: %timeit df[['Year','quarter']].astype(str).sum(axis=1)
+1 loop, best of 3: 230 ms per loop
+
+In [118]: %timeit df[['Year','quarter']].apply(lambda x : '{}{}'.format(x[0],x[1]), axis=1)
+1 loop, best of 3: 9.38 s per loop
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

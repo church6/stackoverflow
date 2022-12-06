@@ -13,6 +13,17 @@
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
 
 
+'''
+To check for the presence of 'abc' in any string in the list:
+xs = ['abc-123', 'def-456', 'ghi-789', 'abc-456']
+if any("abc" in s for s in xs):
+    ...
+
+To get all the items containing 'abc':
+matching = [s for s in xs if "abc" in s]
+'''
+
+
 class Answer1:
     '''
     Description : Answer1

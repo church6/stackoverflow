@@ -10,7 +10,24 @@
 # @style        :  https://google.github.io/styleguide/pyguide.html
 '''
 
+from operator import xor
+
 from colors import FOREGROUND_RED, FOREGROUND_GREEN, FOREGROUND_BLUE, FOREGROUND_YELLOW, ENDCOLOR, LINE
+
+
+# exclusive OR
+def my_xor1(a, b):
+    '''
+    Description :
+    '''
+    return bool(a) != bool(b)
+
+
+def my_xor2(str1, str2):
+    '''
+    Description :
+    '''
+    return bool(str1) ^ bool(str2)
 
 
 class Answer1:
@@ -24,6 +41,8 @@ class Answer1:
         Description : code1
         '''
         print('Answer1::code1')
+        assert xor(1, 2)
+        assert not xor(2, 2)
 
     @staticmethod
     def code2():
