@@ -7,24 +7,63 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+        // Standard library futures
+        // Let's use this as our minimal, reproducible example:
+        async fn calc() -> i32 {
+            42
+        }
+
+        // Call executor::block_on:
+        use futures::executor; // 0.3.25
+
+        fn example() {
+            let v = executor::block_on(calc());
+            println!("code1={}", v);
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
+        // use tokio; // 1.22.0
+        async fn calc() -> i32 {
+            42
+        }
+
+        #[tokio::main]
+        async fn example() {
+            let v = calc().await;
+            println!("code2={}", v);
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code3 {
+        use tokio::runtime::Runtime; // 1.22.0
+
+        async fn calc() -> i32 {
+            42
+        }
+
+        fn example() {
+            let v = Runtime::new().unwrap().block_on(calc());
+            println!("code3={}", v);
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     pub fn test() {
-        //code1::test();
-        //code2::test();
-        //code3::test();
+        code1::test();
+        code2::test();
+        code3::test();
     }
 }
 #[allow(dead_code)]
@@ -75,7 +114,7 @@ mod answer3 {
 }
 pub fn test() {
     _enter!();
-    //answer1::test();
+    answer1::test();
     //answer2::test();
     //answer3::test();
     _leave!();

@@ -7,8 +7,23 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+
+        use itertools::izip;
+
+        fn example() {
+            let a = [1, 2, 3];
+            let b = [4, 5, 6];
+            let c = [7, 8, 9];
+
+            // izip!() accepts iterators and/or values with IntoIterator.
+            for (x, y, z) in izip!(&a, &b, &c) {
+                println!("{x},{y},{z}");
+            }
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -22,7 +37,7 @@ mod answer1 {
         }
     }
     pub fn test() {
-        //code1::test();
+        code1::test();
         //code2::test();
         //code3::test();
     }
@@ -30,8 +45,30 @@ mod answer1 {
 #[allow(dead_code)]
 mod answer2 {
     mod code1 {
+
+        macro_rules! zip {
+    ($x: expr) => ($x);
+    ($x: expr, $($y: expr), +) => (
+        $x.iter().zip(
+            zip!($($y), +))
+    )
+}
+
+        fn example() {
+            let x = vec![1, 2, 3];
+            let y = vec![4, 5, 6];
+            let z = vec![7, 8, 9];
+
+            let zipped = zip!(x, y, z);
+            println!("{:?}", zipped);
+            for (a, (b, c)) in zipped {
+                println!("{} {} {}", a, b, c);
+            }
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -45,7 +82,7 @@ mod answer2 {
         }
     }
     pub fn test() {
-        //code1::test();
+        code1::test();
         //code2::test();
         //code3::test();
     }
@@ -75,8 +112,8 @@ mod answer3 {
 }
 pub fn test() {
     _enter!();
-    //answer1::test();
-    //answer2::test();
+    answer1::test();
+    answer2::test();
     //answer3::test();
     _leave!();
 }

@@ -7,8 +7,22 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+        // https://doc.rust-lang.org/cargo/reference/environment-variables.html
+        use std::path::PathBuf;
+
+        fn example() {
+            let mut d = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+            d.push("resources/test");
+            println!("{}", d.display());
+
+            let mut d = PathBuf::from(env!("CARGO_MANIFEST_DIR"));
+            d.push("Cargo.toml");
+            println!("{}", d.display());
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -22,7 +36,7 @@ mod answer1 {
         }
     }
     pub fn test() {
-        //code1::test();
+        code1::test();
         //code2::test();
         //code3::test();
     }
@@ -75,7 +89,7 @@ mod answer3 {
 }
 pub fn test() {
     _enter!();
-    //answer1::test();
+    answer1::test();
     //answer2::test();
     //answer3::test();
     _leave!();

@@ -7,8 +7,15 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+
+        fn example() {
+            let data = &mut vec![1, 2, 3];
+            let x = &*data;
+            println!("{:?}", x);
+        }
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {

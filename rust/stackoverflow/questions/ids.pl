@@ -182,7 +182,8 @@ pub fn test() {
     //answer2::test();
     //answer3::test();
     _leave!();
-}";
+}
+";
   close $wfh;
 }
 

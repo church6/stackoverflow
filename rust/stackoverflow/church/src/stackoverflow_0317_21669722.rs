@@ -7,8 +7,20 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+        fn example() {
+            let test_str = "übercode"; // type &str
+
+            let uppercase_test_string = test_str.to_uppercase(); // type String
+
+            let uppercase_test_str = uppercase_test_string.as_str(); // back to type &str
+
+            println! {"{}", test_str};
+            println! {"{}", uppercase_test_string};
+            println! {"{}", uppercase_test_str};
+        }
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -30,8 +42,16 @@ mod answer1 {
 #[allow(dead_code)]
 mod answer2 {
     mod code1 {
+        fn example() {
+            let r = "smash".to_ascii_uppercase();
+            println!("Hulk {}!", r); // Hulk SMASH!
+
+            //or one liner
+            println!("Hulk {}!", "smash".to_ascii_uppercase());
+        }
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -53,8 +73,15 @@ mod answer2 {
 #[allow(dead_code)]
 mod answer3 {
     mod code1 {
+        // In Rust 1.2.0, str::to_uppercase() was added.
+
+        fn example() {
+            let s = "smash";
+            println!("Hulk {}", s.to_uppercase());
+        }
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -75,8 +102,8 @@ mod answer3 {
 }
 pub fn test() {
     _enter!();
-    //answer1::test();
-    //answer2::test();
-    //answer3::test();
+    answer1::test();
+    answer2::test();
+    answer3::test();
     _leave!();
 }

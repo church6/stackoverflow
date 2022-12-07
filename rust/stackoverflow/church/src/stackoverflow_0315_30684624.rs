@@ -7,8 +7,26 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+        // Using OpenOptions::append is the clearest way to append to a file:
+
+        use std::fs::OpenOptions;
+        use std::io::prelude::*;
+
+        fn example() {
+            let mut file = OpenOptions::new()
+                .write(true)
+                .append(true)
+                .open("/tmp/church.txt")
+                .unwrap();
+
+            if let Err(e) = writeln!(file, "A new line!") {
+                eprintln!("Couldn't write to file: {}", e);
+            }
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -22,7 +40,7 @@ mod answer1 {
         }
     }
     pub fn test() {
-        //code1::test();
+        code1::test();
         //code2::test();
         //code3::test();
     }
@@ -75,7 +93,7 @@ mod answer3 {
 }
 pub fn test() {
     _enter!();
-    //answer1::test();
+    answer1::test();
     //answer2::test();
     //answer3::test();
     _leave!();

@@ -6,6 +6,14 @@
 
 #[allow(dead_code)]
 mod answer1 {
+
+    /*
+    Indeed, match expr { x => {...} } is the Rust equivalent of let x = expr in ..., in that it's the most relaxed with respect to lifetime temporaries and "should always work",
+    e.g. match e { x => f(x) } should be always equivalent to f(e).
+    On the other hand, let x = expr; is more "imperative" and doesn't allow keeping nested temporaries around,
+    e.g. let x = f(&g()); only compiles if f uses its reference argument without returning it, as the temporary it points to only lives for the duration of the call.
+    */
+
     mod code1 {
         pub fn test() {
             // add your code here

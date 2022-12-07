@@ -7,13 +7,39 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+        // accept &mut [i32] as the function argument, not &[i32]
+        // pass &mut arr to the function, not &arr:
+
+        fn change_value(arr: &mut [i32]) {
+            arr[1] = 10;
+        }
+
+        fn example() {
+            let mut arr: [i32; 4] = [1, 2, 3, 4];
+            change_value(&mut arr);
+            println!("this is {}", arr[1]);
+            assert_eq!(arr[1], 10);
+        }
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
+        // If you wanted to accept an array instead of a slice, you could also do that:
+        fn change_value(arr: &mut [i32; 4]) {
+            arr[1] = 10;
+        }
+
+        fn example() {
+            let mut arr: [i32; 4] = [1, 2, 3, 4];
+            change_value(&mut arr);
+            println!("this is {}", arr[1]);
+            assert_eq!(arr[1], 10);
+        }
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code3 {
@@ -22,8 +48,8 @@ mod answer1 {
         }
     }
     pub fn test() {
-        //code1::test();
-        //code2::test();
+        code1::test();
+        code2::test();
         //code3::test();
     }
 }
@@ -75,7 +101,7 @@ mod answer3 {
 }
 pub fn test() {
     _enter!();
-    //answer1::test();
+    answer1::test();
     //answer2::test();
     //answer3::test();
     _leave!();

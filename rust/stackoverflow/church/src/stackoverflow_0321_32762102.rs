@@ -6,6 +6,12 @@
 
 #[allow(dead_code)]
 mod answer1 {
+    /*
+    For every program, I ran massif twice, as following:
+    valgrind --tool=massif --time-unit=B ./program
+    valgrind --tool=massif  --pages-as-heap=yes --time-unit=B ./program
+    */
+
     mod code1 {
         pub fn test() {
             // add your code here

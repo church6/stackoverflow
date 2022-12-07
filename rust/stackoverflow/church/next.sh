@@ -46,7 +46,7 @@ function run() {
 		while [[ "no" != "${SELECTED_YN}" ]]; do
 			if [[ "yes" = "${SELECTED_YN}" ]]; then
 				echo -e "\033[32m Running ID: \"${ID}\" \033[0m"
-				fmt.pl -f "${WORK_DIR}/src/stackoverflow_${COUNT}_${ID}.rs"
+				rustfmt --quiet --edition 2021 "${WORK_DIR}/src/stackoverflow_${COUNT}_${ID}.rs"
 				build "${ID}"
 			fi
 

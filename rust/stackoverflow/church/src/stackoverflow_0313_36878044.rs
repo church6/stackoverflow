@@ -6,6 +6,16 @@
 
 #[allow(dead_code)]
 mod answer1 {
+    // Use fn do_work() -> Result<(), WorkError>.
+
+    // Result<(), WorkError> means you want the work to be done, but it may fail.
+
+    // Option<WorkError> means you want to get an error, but it may be absent.
+
+    // You probably want the work to be done but not to get an error when you write do_work(), so Result<(), WorkError> is the better choice.
+
+    // I would expect Option<WorkError> only be used in cases like fn get_last_work_error() -> Option<WorkError>.
+
     mod code1 {
         pub fn test() {
             // add your code here

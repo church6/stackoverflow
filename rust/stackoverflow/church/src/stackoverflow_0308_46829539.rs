@@ -6,6 +6,30 @@
 
 #[allow(dead_code)]
 mod answer1 {
+    /*
+    All of your top level module declarations should go in main.rs, like so:
+
+    mod mod1;
+    mod mod2;
+
+    fn main() {
+        println!("Hello, world!");
+        mod1::mod1fn();
+    }
+    */
+
+    /*
+    You can then use crate::mod2 inside mod1:
+
+    use crate::mod2;
+
+    pub fn mod1fn() {
+        println!("1");
+        mod2::mod2fn();
+    }
+
+    */
+
     mod code1 {
         pub fn test() {
             // add your code here

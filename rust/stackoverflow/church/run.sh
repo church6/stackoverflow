@@ -45,7 +45,7 @@ echo "# OS_DATE_NEXT_DAY = ${OS_DATE_NEXT_DAY}"
 
 function fmt() {
 	find "${WORK_DIR}" -type f -name "stackoverflow_*.rs" | while read -r file; do
-		rustfmt --quiet "${file}"
+		rustfmt --quiet --edition 2021 "${file}"
 	done
 }
 # -------------------------------- main --------------------------------

@@ -7,8 +7,27 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+
+        // You can create a function that accepts both &[String] and &[&str] using the AsRef trait:
+
+        fn fun<T: AsRef<str>>(inp: &[T]) {
+            for x in inp {
+                print!("{} ", x.as_ref())
+            }
+            //println!("");
+            println!();
+        }
+
+        fn example() {
+            let vref = vec!["Hello", "world!"];
+            let vown = vec!["May the Force".to_owned(), "be with you.".to_owned()];
+            fun(&vref);
+            fun(&vown);
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {

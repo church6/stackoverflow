@@ -6,6 +6,8 @@
 
 #[allow(dead_code)]
 mod answer1 {
+    // In Rust 2018, mod.rs is not needed https://doc.rust-lang.org/edition-guide/rust-2018/path-changes.html
+
     mod code1 {
         pub fn test() {
             // add your code here

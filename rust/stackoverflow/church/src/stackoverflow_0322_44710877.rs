@@ -7,8 +7,19 @@
 #[allow(dead_code)]
 mod answer1 {
     mod code1 {
+        // Just use Duration and appropriate operator:
+
+        use chrono::{Duration, Utc};
+
+        fn example() {
+            let dt = Utc::now() + Duration::days(137);
+
+            println!("today date + 137 days {}", dt);
+        }
+
         pub fn test() {
             // add your code here
+            example();
         }
     }
     mod code2 {
@@ -22,7 +33,7 @@ mod answer1 {
         }
     }
     pub fn test() {
-        //code1::test();
+        code1::test();
         //code2::test();
         //code3::test();
     }
@@ -75,7 +86,7 @@ mod answer3 {
 }
 pub fn test() {
     _enter!();
-    //answer1::test();
+    answer1::test();
     //answer2::test();
     //answer3::test();
     _leave!();

@@ -9,6 +9,11 @@ mod answer1 {
     mod code1 {
         pub fn test() {
             // add your code here
+
+            //assert_eq!("".is_empty(), true); // a)
+            //assert_eq!(String::new().is_empty(), true); // b)
+            assert!("".is_empty());
+            assert!(String::new().is_empty());
         }
     }
     mod code2 {
@@ -32,6 +37,8 @@ mod answer2 {
     mod code1 {
         pub fn test() {
             // add your code here
+            // assert_eq!("   ".trim().is_empty(), true);
+            assert!("   ".trim().is_empty());
         }
     }
     mod code2 {

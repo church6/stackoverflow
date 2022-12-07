@@ -6,6 +6,25 @@
 
 #[allow(dead_code)]
 mod answer1 {
+    /*
+
+    You can see what the compiler did by executing cargo +nightly rustc -- -Zunstable-options --pretty=expanded. In your example, the compiler will add something like
+
+    #[automatically_derived]
+    #[allow(unused_qualifications)]
+    impl <'a> ::std::fmt::Debug for Person<'a> {
+        fn fmt(&self, __arg_0: &mut ::std::fmt::Formatter) -> ::std::fmt::Result {
+            match *self {
+                Person { name: ref __self_0_0, age: ref __self_0_1 } => {
+                    let mut builder = __arg_0.debug_struct("Person");
+                    let _ = builder.field("name", &&(*__self_0_0));
+                    let _ = builder.field("age", &&(*__self_0_1));
+                    builder.finish()
+                }
+            }
+
+    */
+
     mod code1 {
         pub fn test() {
             // add your code here
